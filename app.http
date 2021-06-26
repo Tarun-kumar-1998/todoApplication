@@ -1,19 +1,37 @@
 ###
-GET http://localhost:3000/agenda/?date=2021-02-22
+
+GET http://localhost:3000/todos/
 
 ###
 
+GET http://localhost:3000/todos/5
 ###
 
-POST http://localhost:3000/localhost:3000/todos
-
+GET http://localhost:3000/agenda/?date=2021-24-04
 ###
 
-###
-
-PUT http://localhost:3000/todos/:3/
+POST http://localhost:3000/todos/
+Content-Type: application/json
 
 {
-  "status": "DONE"
+  
+    "id": 11,
+    "todo": "Get the Job",
+    "priority": "HIGH",
+    "category": "Goal",
+    "status": "IN PROGRESS",
+    "dueDate": "2021-05-11"
+  }
+
+###
+
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "dueDate": "2012-12-22"
+
 }
 ###
+
+DELETE http://localhost:3000/todos/2
